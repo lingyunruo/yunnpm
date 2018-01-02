@@ -43,9 +43,15 @@ module.exports = function(projectName) {
 
 		if(copyResult) {
 			rmDir(cachePath);
-			setPkg({
-				name: projectName
-			}, targetProjectPath);
+			fs.readFile(path.join(targetProjectPath, 'package.json'), {
+				encoding: 'utf8'
+			}, (err, data) => {
+				let config = JSON.parse(data);
+
+				config['name'] = projectName;
+
+				fs.writeFileSync(path.join(targetProjectPath, 'package.json'), JSON.stringify(config, null, '\t'));
+			});
 			console.log('=======================================');
 			console.log('\n');
 			console.log(color.green(`${projectName} init SUCCESS`));

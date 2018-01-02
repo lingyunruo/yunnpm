@@ -3,11 +3,11 @@
 
 #### 初始化一个项目
 
-> yunnpm initproject my-app
+> yunnpm init project my-app
 
 
 
 #### 初始化一个组件目录
 
-> yunnpm initcomp my-component
+> yunnpm init component my-component
 
