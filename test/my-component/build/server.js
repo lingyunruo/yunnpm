@@ -14,7 +14,9 @@ const server = new webpackDevServer(compiler, {
 	overlay: true,
 	watchOptions: {
 		poll: true
-	}
+	},
+	open: true,
+	openPage: '/example/index.html'
 });
 
 server.listen(9000);

@@ -11,3 +11,9 @@
 
 > yunnpm init component my-component
 
+
+#### 新建分支
+
+> yunnpm git new <your branch name>
+
+> 分支规则按照 userName_currentTime_branchName

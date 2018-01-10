@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 
 const color = require('colors');
 const repl = require('repl');
@@ -46,6 +47,7 @@ module.exports = function(projectName) {
 			fs.readFile(path.join(targetProjectPath, 'package.json'), {
 				encoding: 'utf8'
 			}, (err, data) => {
+				console.log(data);
 				let config = JSON.parse(data);
 
 				config['name'] = projectName;

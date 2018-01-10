@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
 const {join} = require('path');
 const program = require('commander');
 const {fsExistsSync} = require('./lib/utils');
@@ -11,6 +10,7 @@ const {execCommandSync} = require('./lib/utils');
 program
 	.usage('<command> [options]')
 	.parse(process.argv);
+
 
 const args = process.argv.slice(3);
 let subcmd = program.args[0];
